@@ -5,7 +5,7 @@ from discord.ext import commands
 import uuid
 import requests
 import shutil
-import abstractedToken
+import tokenAbstractor
 
 import discordImage
 intents = discord.Intents.default()
@@ -23,7 +23,7 @@ def run_discord_bot():
 
 
 
-    client.run(str(abstractedToken.getKey()))
+    client.run(str(tokenAbstractor.getKey()))
 
 @client.event
 async def on_message(message):
