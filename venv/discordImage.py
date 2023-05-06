@@ -8,3 +8,15 @@ class DiscordImage:
 
     def getRatings(self) -> str:
         return self.ratings
+
+    def addRating(self, rating):
+        self.ratings.append(rating)
+
+
+class Rating:
+    def __init__(self, userName, rating):
+        self.userName = userName
+        self.rating = rating
+
+    def __str__(self):
+        return self.userName + " " + str(self.rating)
